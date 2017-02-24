@@ -1,0 +1,8 @@
+#eight-ball {
+  width: 500px;
+  height: 500px;
+  background: black;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
