@@ -12,7 +12,7 @@ html, body {
   background-color: white;
   padding: 4%;
   border-radius: 30px;
-  margin-top: 10%;
+  margin-top: 6%;
 }
 
 
@@ -32,5 +32,13 @@ html, body {
 #donald {
   position: absolute;
   bottom: 0;
-  left: 25%;
+}
+
+#donald img {
+  max-height: 30em;
+}
+
+.last {
+  max-height: 20em;
+  height: 50%;
 }
