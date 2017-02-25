@@ -1,11 +1,16 @@
 var messages = [
 "No deal. Sad!",
 "I have the best words",
-"Terrific",
+"It's gonna be terrific",
 "Build a wall",
 "I see bigly success in your future",
-"I have the best advice",
-"Build a wall"
+"Everyone love my advice. I have the best advice",
+"Build a wall",
+"Watch out for bad hombres",
+"Beware of nasty women",
+"Outlook is sad!",
+"Outlook is terrific!",
+"That's a terrible question. You're fired!"
 ]
 
 var generateMessage = function() {
@@ -17,7 +22,7 @@ var generateMessage = function() {
 }
 
 
-$('#eight-ball').on('click', function() {
+$('#donald').on('click', function() {
   $(this).effect('shake');
   generateMessage();
 })

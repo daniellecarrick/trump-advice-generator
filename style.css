@@ -1,32 +1,36 @@
-body {
-  background-color: darkgray;
+html, body {
+  background-color: #AF2727;
+  height: 100%;
+  width: 100%;
 }
 
-#eight-ball {
-  width: 500px;
-  height: 500px;
-  background: black;
-  -moz-border-radius: 50%;
-  -webkit-border-radius: 50%;
-  border-radius: 50%;
-  padding-top: 20%;
-  margin:10% auto;
+.view {
+  height: 100vh;
+}
+
+.thought-bubble {
+  background-color: white;
+  padding: 4%;
+  border-radius: 30px;
+  margin-top: 10%;
+}
+
+
+.arrow-down {
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 20px solid white;
+  margin: 0 auto;
 }
 
 #messages {
-  font-size: 18px;
-  color: white;
-  position: absolute;
   text-transform: uppercase;
-  top: 0;
-  left: 40%;
 }
 
-#triangle {
-  width: 0;
-  height: 0;
-  border-left: 100px solid transparent;
-  border-right: 100px solid transparent;
-  border-top: 200px solid blue;
+#donald {
+  position: absolute;
+  bottom: 0;
+  left: 25%;
 }
-
