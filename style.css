@@ -4,14 +4,15 @@ html, body {
   width: 100%;
 }
 
-.view {
-  height: 100vh;
+.section {
+  height: 100%;
 }
 
 .thought-bubble {
   background-color: white;
   padding: 4%;
   border-radius: 30px;
+  margin-top: 2%;
 }
 
 
@@ -41,3 +42,20 @@ html, body {
   max-height: 20em;
   height: 50%;
 }
+
+.about {
+  background-color: #232323;
+  height: 30%;
+  color: white;
+}
+
+.about p {
+  font-size: 18px;
+}
+
+hr {
+  width: 20%;
+  border: 2px solid;
+}
+
+
