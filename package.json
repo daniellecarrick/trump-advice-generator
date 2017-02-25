@@ -26,6 +26,7 @@
   "homepage": "https://github.com/daniellecarrick/trump-magic-eight-ball#readme",
   "dependencies": {
     "bootstrap": "^3.3.7",
+    "font-awesome": "^4.7.0",
     "handlebars": "^4.0.6",
     "jquery": "^3.1.1",
     "jquery-ui": "^1.12.1"
