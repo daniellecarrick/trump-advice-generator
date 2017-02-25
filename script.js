@@ -17,7 +17,8 @@ var generateMessage = function() {
 }
 
 
-$('button').on('click', function() {
+$('#eight-ball').on('click', function() {
+  $(this).effect('shake');
   generateMessage();
 })
 

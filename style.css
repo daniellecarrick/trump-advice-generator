@@ -1,3 +1,7 @@
+body {
+  background-color: darkgray;
+}
+
 #eight-ball {
   width: 500px;
   height: 500px;
@@ -5,4 +9,24 @@
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
   border-radius: 50%;
+  padding-top: 20%;
+  margin:10% auto;
 }
+
+#messages {
+  font-size: 18px;
+  color: white;
+  position: absolute;
+  text-transform: uppercase;
+  top: 0;
+  left: 40%;
+}
+
+#triangle {
+  width: 0;
+  height: 0;
+  border-left: 100px solid transparent;
+  border-right: 100px solid transparent;
+  border-top: 200px solid blue;
+}
+

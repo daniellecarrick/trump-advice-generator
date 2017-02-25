@@ -5,17 +5,19 @@
   <link rel="stylesheet" type="text/css" href="style.css">
   <script type="text/javascript" src="node_modules/handlebars/dist/handlebars.js"></script>
   <script type="text/javascript" src="node_modules/jquery/dist/jquery.js"></script>
+  <script type="text/javascript" src="node_modules/jquery-ui-1.12.1.custom/jquery-ui.js"></script>
   <title>Trump Magic Eight Ball</title>
 </head>
 <body>
   <div class="container">
     <div class="row">
-      <div class="col-md-6">
+      <div class="col-md-6 text-center">
         <h1>Trump Magic 8-ball</h1>
-        <button type="button" class="btn" id="shake">Shake the ball</button>
         <div id="eight-ball">
-          <div class="col-md-6" id="messages">
-          Ask the Donald Trump a question.
+          <div class="col-md-6">
+            <div class="text-center center-block" id="triangle">
+              <p id="messages">Ask the Donald Trump a question.</p>
+            </div>
           </div>
         </div>
       </div>
