@@ -2,6 +2,7 @@ html, body {
   background-color: #AF2727;
   height: 100%;
   width: 100%;
+  overflow-x: hidden;
 }
 
 .section {
