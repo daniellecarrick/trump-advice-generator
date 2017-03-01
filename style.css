@@ -16,7 +16,6 @@ html, body {
   margin-top: 2%;
 }
 
-
 .arrow-down {
   width: 0;
   height: 0;
@@ -24,6 +23,11 @@ html, body {
   border-right: 20px solid transparent;
   border-top: 20px solid white;
   margin: 0 auto;
+}
+
+.bubble-container {
+  position: relative;
+  z-index: 1000;
 }
 
 #messages {
@@ -36,7 +40,7 @@ html, body {
 }
 
 #donald img {
-  max-height: 30em;
+  max-height: 28em;
 }
 
 .last {
