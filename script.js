@@ -1,3 +1,10 @@
+'use strict';
+// note: we add in "use strict" to ensure we are not breaking common
+// js rules and unexpectedly doing things like creating global variables.
+
+// Configuration
+// -------------
+// configure the list of messages to show
 var messages = [
   "No deal. Sad!",
   "I have the best words",
@@ -15,8 +22,29 @@ var messages = [
   "That's a terrible question. You're fired!"
 ];
 
-// keep track of the state of what is currently being displayed
+// configure the list of sound files to use
+var soundFiles = [
+  'sounds/trump1.mp3',
+  'sounds/trump2.mp3',
+  'sounds/trump3.mp3',
+  'sounds/trump4.mp3',
+  'sounds/trump5.mp3',
+  'sounds/trump6.mp3',
+  'sounds/trump7.mp3',
+  'sounds/trump8.mp3',
+  'sounds/trump9.mp3',
+  'sounds/trump10.mp3',
+  'sounds/trump11.mp3',
+  'sounds/trump12.mp3'
+];
+
+// State global variables
+// -----------------------
+// the state of what is currently being displayed
 var currentMessage;
+
+// the preloaded audio will be stored here
+var sounds;
 
 /**
  * Randomly selects a new message and updates the #messages node to display it
@@ -41,28 +69,30 @@ function generateMessage() {
   $('#messages').text(currentMessage);
 }
 
-var audioArray = ['sounds/trump1.mp3', 'sounds/trump2.mp3', 'sounds/trump3.mp3','sounds/trump4.mp3', 'sounds/trump5.mp3', 'sounds/trump6.mp3', 'sounds/trump7.mp3', 'sounds/trump8.mp3', 'sounds/trump9.mp3', 'sounds/trump10.mp3', 'sounds/trump11.mp3', 'sounds/trump12.mp3']
-
-
-
-
-var randomizer = function() {
-  var upperLimit = audioArray.length - 1
-  audioIndex = Math.round(Math.random() * upperLimit);
-  
-  console.log(audioArray[audioIndex]);
-  
-  
-// var audio = new Audio(audioArray[audioIndex]);
-
-var audio= new Audio(audioArray[audioIndex])
-
-audio.play();
-console.log(audio.play)
+/**
+ * Preload all the sounds
+ */
+function preloadSounds() {
+  sounds = soundFiles.map(function (soundFile) {
+    return new Audio(soundFile);
+  });
 }
 
-// var audio = new Audio('audio_file.mp3');
 
+/**
+ * Randomly play a sound
+ */
+function playRandomSound() {
+  var upperLimit = sounds.length - 1;
+  var index = Math.round(Math.random() * upperLimit);
+
+  sounds[index].play();
+}
+
+
+// Run the application
+// -------------------
+preloadSounds();
 
 // wait for the page to be loaded, then run this js
 $(document).ready(function () {
@@ -70,6 +100,6 @@ $(document).ready(function () {
   $('#donald').on('click', function () {
     $(this).effect('shake');
     generateMessage();
-    randomizer();
+    playRandomSound();
   });
 });
